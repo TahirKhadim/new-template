@@ -6,7 +6,7 @@ gsap.from("#right", {
         scroller: "body"
 
     },
-    x: "200",
+    x: "160",
     duration: 1,
     delay: 1,
 
@@ -18,7 +18,7 @@ gsap.from("#left", {
         scroller: "body"
 
     },
-    x: "-200",
+    x: "-160",
     duration: 1,
     delay: 1,
 
