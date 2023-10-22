@@ -435,22 +435,7 @@
 			color: white;
 		}
 
-		.fix-img {
-			width: 100%;
-			height: 80%;
-			background-image: url(images/homie.png);
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-position: center;
-			background-size: cover;
-			color: black;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			overflow-y: hidden;
-			position: relative;
 
-		}
 
 
 
@@ -475,13 +460,43 @@
 		.cr button {
 			background-color: #ff2d94;
 		}
+
+		.fix-img {
+			width: 100%;
+			height: 95%;
+			background-image: url(images/homie.png);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+			color: black;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			position: relative;
+			isolation: isolate;
+			flex-wrap: wrap;
+		}
+
+
+
+		.fix-img::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			background: black;
+			opacity: .6;
+		}
 	</style>
 	<!--  End call svg Styling -->
 </head>
 
 <body>
 
-	<div class="wrap" style="background-color: lightgreen;">
+	<div class="wrap" style="background-color: lightgreen; overflow-x: hidden;">
 		<div class=" container-fluid">
 			<div class="row">
 				<div class="col-lg-12  d-flex justify-content-end">
@@ -499,7 +514,7 @@
 		</div>
 	</div>
 
-	<nav class="navbar  navbar-expand-xl  navbar-dark" style="background-color: #ff2d94;">
+	<nav class="navbar  navbar-expand-xl  navbar-dark overflow-x-hidden" style="background-color: #ff2d94;">
 		<div class="container-fluid">
 			<img src="images/logo-removebg-preview.png" alt="pic" width="120px">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -553,7 +568,7 @@
 
 
 	<!-- sliding text -->
-	<div class="sliding-text-box">
+	<div class="sliding-text-box overflow-hidden">
 		<div class="sliding-text">
 			<b>At work home road motor way 24/7.</b><b>Cars vans 4 by 4.</b><b>Puncture tyre change.</b> <b>Flat tyre
 				change.</b> <b>Locknuts Removal.</b> <b>Tyre Balance.</b>
@@ -564,52 +579,46 @@
 		g text -->
 
 
+	<!-- top section -->
+	<div class="container-fluid fix-img">
+		<h2 class="text-center" style="color: #f5f8f9; text-shadow: 5px 5px 8px #070707;font-weight: bold;">
+			24 Hour Mobile Tyre Service</h2>
+		<div class="front-item"><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				Breakdown Recovery</span><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				Flat Tyre</span><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
 
+				Mobile Tyre Fitting</span>
+		</div>
+		<div class="front-item"><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				Jump Start</span><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				Roadside Service</span><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				At Home Service</span><span><i class="fa-solid fa-circle-check"></i></span>
+			<span>|</span><span>
+				At Office Service</span>
+		</div>
+
+		<button class="btn mt-2 "
+			style="background-color: #ff2d94; border: #ff2d94; display: flex; justify-self: center; "><a
+				href="tel:+447916312844">Give Us A Call</a></button>
+	</div>
+	<!-- end section -->
 
 	<!-- ========== Start Section hero image ========== -->
 
-	<div class="container-fluid fix-img">
-		<div class="row">
-			<div id="background">
-				<div class="col-12 text-center">
-					<h2 class="text-center"
-						style="color: #f5f8f9; text-shadow: 5px 5px 8px #070707;font-weight: bold; margin: auto;">
-						24 Hour Mobile Tyre Service</h2>
-					<div class="front-item"><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							Breakdown Recovery</span><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							Flat Tyre</span><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
 
-							Mobile Tyre Fitting</span>
-					</div>
-					<div class="front-item"><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							Jump Start</span><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							Roadside Service</span><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							At Home Service</span><span><i class="fa-solid fa-circle-check"></i></span>
-						<span>|</span><span>
-							At Office Service</span>
-					</div>
-
-					<button class="btn mt-3 m-auto"
-						style="background-color: #ff2d94; border: #ff2d94; display: flex; justify-self: center; "><a
-							href="#readmore">Read
-							More</a></button>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- ========== End Section hero image ========== -->
 
 	<!-- sliding text -->
 
 	<!-- sliding text -->
 	<!-- ========== Start Section ========== -->
-	<div class="content mt-5">
+	<div class="content mt-5 overflow-hidden">
 
 
 
@@ -656,7 +665,7 @@
 
 	<!-- ========== Start Section services ========== -->
 	<section>
-		<div class="container-fluid   mt-2">
+		<div class="container-fluid overflow-hidden  mt-2">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -749,7 +758,7 @@
 	<!-- ========== End Section services ========== -->
 
 	<!-- ========== Start Section about ========== -->
-	<div class="container bg-light py-3 mb-5">
+	<div class="container bg-light py-3 mb-5 overflow-hidden">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<h1 class="text-center">About us</h1>
@@ -892,11 +901,12 @@
 
 
 	<!-- testimonial -->
-	<section class="client pt-3 pb-5">
+	<section class="client pt-3 pb-5 overflow-hidden">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-12 col-md-12 col-sm-12">
-					<h1 class="display-3 col-lg-12 col-md-12 col-sm-12 fw-bold text-white ">Testimonials</h1>
+					<h1 class="display-3 col-lg-12 col-md-12 col-sm-12 fw-bold text-white text-center ">Testimonials
+					</h1>
 					<hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height:3px;">
 					<p class="p-text text-white font-weight-bold">What our clients are saying</p>
 				</div>
